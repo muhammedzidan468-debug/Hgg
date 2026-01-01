@@ -1,0 +1,32 @@
+# Zidan's First Python Script
+print("--- ZIDAN CYBER SECURITY SYSTEM ---")
+
+# User se naam poochna
+naam = input("Apna 'Code Name' batao: ")
+
+# Ek chota sa logic
+print(f"Suno {naam}, tumhari speed 0.12 Mbps hai lekin dimaag 1000 Mbps hai!")
+
+umr = input("Hacker banne mein kitne saal lagenge? ")
+print(f"Behtareen! {umr} saal baad tum dunya ke best hacker hoge!")
+naam = input("Apna 'Code Name' batao: ")
+
+# Ek chota sa logic
+print(f"Suno {naam}, tumhari speed 0.12 Mbp>
+
+umr = input("Hacker banne mein kitne saal l>
+print(f"Behtareen! {umr} saal baad tum duny>
+
+
+
+
+
+
+
+
+
+
+               [ Cancelled ]
+^G Help    ^O Write Ou^F Where Is^K Cut
+^X Exit    ^R Read Fil^\ Replace
+

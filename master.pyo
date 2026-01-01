@@ -1,0 +1,30 @@
+import os
+
+def menu():
+    print("="*30)
+    print("  ZIDAN CYBER EXPERT MENU  ")
+    print("="*30)
+    print("1. Run Zphisher")
+    print("2. Run IP-Tracer")
+    print("3. Run Wifite2")
+    print("4. Check Battery Status")
+    print("5. Exit")
+    print("="*30)
+
+menu()
+choice = input("Enter your choice (1-5): ")
+
+if choice == '1':
+    os.system("cd zphisher && ./zphisher.sh")
+elif choice == '2':
+    os.system("trace -m")
+elif choice == '3':
+    os.system("sudo wifite")
+elif choice == '4':
+    os.system("termux-battery-status")
+elif choice == '5':
+    print("Allah Hafiz Zidan!")
+    exit()
+else:
+    print("Invalid Choice!")
+

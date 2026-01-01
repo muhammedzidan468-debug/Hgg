@@ -1,0 +1,1 @@
+import os; print('='*20); print('ZIDAN MASTER MENU'); print('='*20); print('1. Zphisher\n2. IP-Tracer\n3. Battery\n4. Exit'); c = input('Select: '); os.system('cd zphisher && ./zphisher.sh') if c=='1' else os.system('trace -m') if c=='2' else os.system('termux-battery-status') if c=='3' else exit()

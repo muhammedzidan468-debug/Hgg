@@ -1,0 +1,36 @@
+import os
+import time
+
+def menu():
+    while True:
+        os.system('clear')
+        print("\033[96m" + "="*40)
+        print("    ZIDAN'S DANGEROUS HACKER MENU")
+        print("="*40 + "\033[0m")
+        print("1. SCOM Ka Badla (Ping Stress)")
+        print("2. Battery Check (TECNO Health)")
+        print("3. Hidden Files Dekho (Jasoosi)")
+        print("4. Whois Lookup (Website Info)")
+        print("5. Exit (Bahar Niklo)")
+        print("\033[96m" + "="*40 + "\033[0m")
+        
+        choice = input("\033[93mZidan bhai, number select karein (1-5): \033[0m")
+        
+        if choice == '1':
+            print("SCOM ko jhatka lag raha hai...")
+            os.system("ping -c 20 -i 0.2 8.8.8.8")
+        elif choice == '2':
+            os.system("termux-battery-status")
+        elif choice == '3':
+            os.system("ls -a")
+        elif choice == '4':
+            site = input("Website ka naam (e.g. google.com): ")
+            os.system(f"whois {site}")
+        elif choice == '5':
+            print("Allah Hafiz!")
+            break
+        
+        input("\nAgey barhne ke liye Enter dabayein...")
+
+if __name__ == "__main__":
+    menu()

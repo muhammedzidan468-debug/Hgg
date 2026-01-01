@@ -1,0 +1,26 @@
+import phonenumbers
+from phonenumbers import geocoder, carrier
+
+def get_number_info(phone_number):
+    try:
+        # نمبر کو پارس کریں
+        parsed_number = phonenumbers.parse(phone_number)
+        
+        # ملک اور علاقے کی معلومات (Location)
+        location = geocoder.description_for_number(parsed_number, "en")
+        
+        # نیٹ ورک پرووائڈر کی معلومات (Carrier)
+        service_provider = carrier.name_for_number(parsed_number, "en")
+        
+        print(f"--- Information for {phone_number} ---")
+        print(f"Location: {location}")
+        print(f"Network Provider: {service_provider}")
+        print(f"Valid Number: {phonenumbers.is_valid_number(parsed_number)}")
+        
+    except Exception as e:
+        print(f"Error: {e}")
+
+# ٹیسٹ کے لیے نمبر یہاں لکھیں (Country code کے ساتھ)
+target_number = "+923252949842" 
+get_number_info(target_number)
+

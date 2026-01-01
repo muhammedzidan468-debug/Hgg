@@ -1,0 +1,5 @@
+import os
+
+# Termux API se battery info lene ki command
+os.system("termux-battery-status")
+

@@ -1,0 +1,17 @@
+import requests
+import time
+
+# Zidan ki testing ID
+target_id = "zidan__112211"
+
+def start_test():
+    print(f"Starting stress test on {target_id}...")
+    for i in range(1, 301):
+        # Yahan hum bohot fast requests bhejenge
+        print(f"Sending follow request {i}/300")
+        # Note: Yeh sirf logic samjhane ke liye hai
+        # Asli request ke liye headers aur cookies chahiye hotay hain
+        time.sleep(0.1) # 1 second se bhi kam ka gap
+
+start_test()
+

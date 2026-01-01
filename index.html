@@ -1,34 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZIDAN EXPERT HUB</title>
+    <title>ZIDAN EXPERT HUB - LOCKED</title>
     <style>
-        body { background: #000; color: #0f0; font-family: monospace; text-align: center; padding: 20px; }
-        .card { border: 2px solid #0f0; margin: 15px auto; padding: 15px; max-width: 500px; border-radius: 12px; background: #050505; }
-        .btn { background: #0f0; color: #000; border: none; padding: 10px 20px; cursor: pointer; font-weight: bold; border-radius: 5px; margin-top: 10px; }
-        h1 { color: #f00; text-shadow: 0 0 15px #f00; }
+        body { background: #000; color: #0f0; font-family: monospace; text-align: center; padding: 50px; }
+        .lock-box { border: 2px solid #f00; padding: 30px; display: inline-block; border-radius: 15px; box-shadow: 0 0 20px #f00; }
+        input { padding: 10px; background: #111; color: #0f0; border: 1px solid #0f0; text-align: center; width: 80%; }
+        button { background: #f00; color: #fff; border: none; padding: 10px 20px; cursor: pointer; font-weight: bold; margin-top: 10px; border-radius: 5px; }
+        .payment-info { color: yellow; margin-top: 20px; font-size: 1.1em; border-top: 1px solid #333; padding-top: 10px; }
     </style>
 </head>
 <body>
-    <h1>⚠ ZIDAN EXPERT HUB ⚠</h1>
-    <div class="card">
-        <h3>📍 IP-TRACER</h3>
-        <code id="ip">git clone https://github.com/rajkumardusad/IP-Tracer.git</code><br>
-        <button class="btn" onclick="copyIt('ip')">COPY COMMAND</button>
-    </div>
-    <div style="margin-top:50px; border-top: 1px solid #0f0; padding-top: 20px;">
-        <h3>💰 SUPPORT ZIDAN EXPERT</h3>
-        <p>EasyPaisa: <b style="color:yellow; font-size:1.5em;">03425876955</b></p>
+    <div class="lock-box">
+        <h1 style="color:red;">⚠ ACCESS RESTRICTED ⚠</h1>
+        <p>Ye tools sirf paid users ke liye hain.</p>
+        <input type="password" id="pass" placeholder="Enter Password"><br>
+        <button onclick="check()">UNLOCK TOOLS</button>
+        
+        <div class="payment-info">
+            <p>Password lene ke liye <b>100 PKR</b> bhejien:</p>
+            <h2 style="color:#0f0;">EasyPaisa: 03425876955</h2>
+            <p>Screenshot WhatsApp par bhej kar password lein!</p>
+        </div>
     </div>
     <script>
-        function copyIt(id) {
-            var text = document.getElementById(id).innerText;
-            navigator.clipboard.writeText(text);
-            alert("Command Copied!");
+        function check() {
+            var p = document.getElementById("pass").value;
+            if(p === "ZIDAN786") {
+                window.location.href = "tools.html";
+            } else {
+                alert("Ghalat Password! Pehle payment karen.");
+            }
         }
     </script>
 </body>
 </html>
- 

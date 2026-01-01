@@ -1,0 +1,1 @@
+name = 'Zidan'; print(f'Oye {name} Itna data kharch kar ke kaisa lag raha hai'); input('Dukh ho raha hai? (Ji/Nahi): '); print('Chalo koi nahi, Cyber Expert banne ke liye itni qurbani toh deni parti hai')
