@@ -1,27 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZIDAN EXPERT HUB</title>
+    <title>ZIDAN EXPERT HUB - TOOLS</title>
     <style>
-        body { background: #000; color: #0f0; font-family: monospace; text-align: center; padding: 20px; }
-        .card { border: 2px solid #0f0; margin: 15px auto; padding: 15px; max-width: 500px; border-radius: 12px; background: #050505; }
-        .btn { background: #0f0; color: #000; border: none; padding: 10px 20px; cursor: pointer; font-weight: bold; border-radius: 5px; margin-top: 10px; }
-        h1 { color: #f00; text-shadow: 0 0 15px #f00; }
+        body { background: #000; color: #0f0; font-family: monospace; padding: 20px; text-align: center; }
+        .tool-card { border: 2px solid #0f0; margin: 20px auto; padding: 20px; max-width: 600px; border-radius: 15px; background: #050505; text-align: left; }
+        .command { background: #222; color: #f00; padding: 10px; display: block; margin: 10px 0; border-radius: 5px; border-left: 5px solid #f00; }
+        .btn { background: #0f0; color: #000; border: none; padding: 8px 15px; cursor: pointer; font-weight: bold; border-radius: 5px; }
+        h1 { color: #f00; text-shadow: 0 0 10px #f00; }
+        .step { color: yellow; font-weight: bold; }
     </style>
 </head>
 <body>
-    <h1>⚠ ZIDAN EXPERT HUB ⚠</h1>
-    <div class="card">
-        <h3>📍 IP-TRACER</h3>
-        <code id="ip">git clone https://github.com/rajkumardusad/IP-Tracer.git</code><br>
-        <button class="btn" onclick="copyIt('ip')">COPY COMMAND</button>
+    <h1>🚀 ZIDAN PREMIUM TOOLS 🚀</h1>
+    
+    <div class="tool-card">
+        <h3>📍 IP-TRACER (Full Tutorial)</h3>
+        <p>Is tool se aap kisi bhi IP ka city, country aur network maloom kar sakte hain.</p>
+        
+        <p class="step">Step 1: Download Tool</p>
+        <code class="command" id="c1">git clone https://github.com/rajkumardusad/IP-Tracer.git</code>
+        <button class="btn" onclick="copyIt('c1')">Copy Command</button>
+
+        <p class="step">Step 2: Go to Directory</p>
+        <code class="command" id="c2">cd IP-Tracer</code>
+        
+        <p class="step">Step 3: Permission & Install</p>
+        <code class="command" id="c3">chmod +x install && ./install</code>
+
+        <p class="step">Step 4: Run Tool</p>
+        <code class="command" id="c4">trace -t [IP-ADDRESS]</code>
+        <p><i>Example: trace -t 8.8.8.8</i></p>
     </div>
-    <div style="margin-top:50px; border-top: 1px solid #0f0; padding-top: 20px;">
-        <h3>💰 SUPPORT ZIDAN EXPERT</h3>
-        <p>EasyPaisa: <b style="color:yellow; font-size:1.5em;">03425876955</b></p>
-    </div>
+
     <script>
         function copyIt(id) {
             var text = document.getElementById(id).innerText;
@@ -31,4 +42,3 @@
     </script>
 </body>
 </html>
- 
