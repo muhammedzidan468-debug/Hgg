@@ -1,43 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>ZIDAN EXPERT HUB - TOOLS</title>
+    <title>ZIDAN PREMIUM TOOLS</title>
     <style>
         body { background: #000; color: #0f0; font-family: monospace; padding: 20px; text-align: center; }
-        .tool-card { border: 2px solid #0f0; margin: 20px auto; padding: 20px; max-width: 600px; border-radius: 15px; background: #050505; text-align: left; }
-        .command { background: #222; color: #f00; padding: 10px; display: block; margin: 10px 0; border-radius: 5px; border-left: 5px solid #f00; }
+        .tool-card { border: 2px solid #0f0; margin: 20px auto; padding: 20px; max-width: 650px; border-radius: 15px; background: #050505; text-align: left; position: relative; }
+        .command { background: #222; color: #f00; padding: 10px; display: block; margin: 10px 0; border-radius: 5px; border-left: 5px solid #f00; font-size: 0.9em; }
         .btn { background: #0f0; color: #000; border: none; padding: 8px 15px; cursor: pointer; font-weight: bold; border-radius: 5px; }
         h1 { color: #f00; text-shadow: 0 0 10px #f00; }
-        .step { color: yellow; font-weight: bold; }
+        .step { color: yellow; font-weight: bold; margin-top: 15px; }
+        .whatsapp-float { background: #25d366; color: #fff; padding: 10px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 20px; }
     </style>
 </head>
 <body>
-    <h1>🚀 ZIDAN PREMIUM TOOLS 🚀</h1>
-    
+    <h1>🚀 ZIDAN EXPERT PREMIUM HUB 🚀</h1>
+    <p>Contact for Support: <a href="https://wa.me/923554100799" class="whatsapp-float">Chat on WhatsApp</a></p>
+
     <div class="tool-card">
-        <h3>📍 IP-TRACER (Full Tutorial)</h3>
-        <p>Is tool se aap kisi bhi IP ka city, country aur network maloom kar sakte hain.</p>
-        
-        <p class="step">Step 1: Download Tool</p>
-        <code class="command" id="c1">git clone https://github.com/rajkumardusad/IP-Tracer.git</code>
-        <button class="btn" onclick="copyIt('c1')">Copy Command</button>
+        <h3>📍 1. IP-TRACER (Location Tracker)</h3>
+        <p class="step">Installation:</p>
+        <code class="command" id="c1">git clone https://github.com/rajkumardusad/IP-Tracer.git && cd IP-Tracer && chmod +x install && ./install</code>
+        <button class="btn" onclick="copyIt('c1')">Copy All</button>
+        <p class="step">How to use:</p>
+        <code>trace -t [Target IP]</code>
+    </div>
 
-        <p class="step">Step 2: Go to Directory</p>
-        <code class="command" id="c2">cd IP-Tracer</code>
-        
-        <p class="step">Step 3: Permission & Install</p>
-        <code class="command" id="c3">chmod +x install && ./install</code>
+    <div class="tool-card">
+        <h3>📱 2. ZPHISHER (Phishing Tool)</h3>
+        <p class="step">Installation:</p>
+        <code class="command" id="c2">git clone https://github.com/htr-tech/zphisher.git && cd zphisher && bash zphisher.sh</code>
+        <button class="btn" onclick="copyIt('c2')">Copy All</button>
+        <p class="step">Details:</p>
+        <p>Is se aap Facebook/Instagram ke fake login pages bana kar security test kar sakte hain.</p>
+    </div>
 
-        <p class="step">Step 4: Run Tool</p>
-        <code class="command" id="c4">trace -t [IP-ADDRESS]</code>
-        <p><i>Example: trace -t 8.8.8.8</i></p>
+    <div class="tool-card">
+        <h3>📸 3. CAMPHISH (Camera Hack)</h3>
+        <p class="step">Installation:</p>
+        <code class="command" id="c3">git clone https://github.com/techchipnet/CamPhish.git && cd CamPhish && bash camphish.sh</code>
+        <button class="btn" onclick="copyIt('c3')">Copy All</button>
+        <p class="step">Details:</p>
+        <p>Is tool se target ke camera ka access link ke zariye liya jata hai.</p>
     </div>
 
     <script>
         function copyIt(id) {
             var text = document.getElementById(id).innerText;
             navigator.clipboard.writeText(text);
-            alert("Command Copied!");
+            alert("Commands Copied! Paste in Termux.");
         }
     </script>
 </body>
